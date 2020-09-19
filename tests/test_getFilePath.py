@@ -1,12 +1,15 @@
-import sqlite3
+from tests.decorator.testDecorator import testing_function as test
+
+# To-test function
 from scr.getDbFilePath import getDbFilePath
 
 EXPECTED_FILE_PATH = r"C:\Users\szymj\Desktop\Consume\db\db.db"
 
-functionReturnedData = getDbFilePath()
-if functionReturnedData == EXPECTED_FILE_PATH:
-    print("\u001b[32m \t\tPassed")
-else:
-    print("\u001b[31m \t\tFailed")
-print("\u001b[0m", end="")
+@test(file=__file__)
+def main():
+    functionReturnedData = getDbFilePath()
+    if functionReturnedData == EXPECTED_FILE_PATH:
+        return True
+    return False
 
+main()
