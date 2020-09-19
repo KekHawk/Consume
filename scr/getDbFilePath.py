@@ -1,7 +1,7 @@
 import os.path
 
 def getDbFilePath() -> str:
-    DATABASE_PATH_FROM_ROOT = "db" # Note: requires double (\\) backslashes as divisions in case of multiple directory distance
+    DATABASE_PATH_FROM_ROOT = r"db" 
     DATABASE_NAME = "db.db"
 
     # Using FP as short for FilePath
