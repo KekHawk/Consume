@@ -7,7 +7,7 @@ do
 	
 	if [ "$f" != '__init__' ]
 	then
-		printf "Running: $f"
+		#printf "Running: $f"
 		python -m "tests.$f"
 	fi
 done
